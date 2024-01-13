@@ -21,7 +21,7 @@ module.exports = {
         },
       },
       {
-        test: /\.js?$/,
+        test: /\.jsx?$/,
         exclude: [path.resolve(__dirname, 'node_modules')],
         loader: ['babel-loader'],
       },
@@ -40,6 +40,7 @@ module.exports = {
   },
   resolve: {
     modules: [__dirname, 'node_modules'],
+    extensions: ['.js', '.jsx'],
   },
   plugins: [
     new CleanWebpackPlugin({

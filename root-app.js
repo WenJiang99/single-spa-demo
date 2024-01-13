@@ -35,40 +35,5 @@ singleSpa.registerApplication(
   () => import('./apps/vue-app'),
   showWhenAnyOf(['/vue']),
 );
-singleSpa.registerApplication(
-  'login',
-  () => import('single-spa-auth-app'),
-  showWhenAnyOf(['/login']),
-);
-
-singleSpa.registerApplication(
-  'layout',
-  () => import('single-spa-layout-app'),
-  showExcept(['/login']),
-);
-
-singleSpa.registerApplication(
-  'home',
-  () => import('single-spa-home-app'),
-  showWhenAnyOf(['/']),
-);
-
-singleSpa.registerApplication(
-  'angular',
-  () => import('single-spa-angular-app'),
-  showWhenPrefix(['/angular']),
-);
-
-singleSpa.registerApplication(
-  'vue',
-  () => import('single-spa-vue-app'),
-  showWhenPrefix(['/vue']),
-);
-
-singleSpa.registerApplication(
-  'react',
-  () => import('single-spa-react-app'),
-  showWhenPrefix(['/react']),
-);
 
 singleSpa.start();

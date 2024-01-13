@@ -1,3 +1,7 @@
-const e = document.createElement('div');
-e.innerHTML = 'react-app';
-document.body.appendChild(e);
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import { App } from './App';
+
+const root = createRoot(document.getElementById('react-app'));
+
+root.render(React.createElement(App));
