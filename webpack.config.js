@@ -41,6 +41,9 @@ module.exports = {
   resolve: {
     modules: [__dirname, 'node_modules'],
     extensions: ['.js', '.jsx'],
+    alias: {
+      'single-spa': path.resolve(__dirname, 'single-spa/lib/es2015/esm/single-spa.dev.js'),
+    },
   },
   plugins: [
     new CleanWebpackPlugin({
@@ -66,4 +69,5 @@ module.exports = {
     historyApiFallback: true,
     writeToDisk: true,
   },
+  mode: 'development',
 };
